@@ -5,18 +5,15 @@ import homepage from '@/app/images/homepageV3.jpg';
 import Link from 'next/link';
 import { signInWithEmailAndPassword} from 'firebase/auth'
 import { auth } from './controller/firebase';
-import { Router } from 'next/router';
 import { useRouter } from 'next/navigation';
-import { setTimeout } from 'timers/promises';
+import Notification from './components/msjWrongPassword';
+
 
 
 export default function Home() {
 
-  const [Message, setMessage] = useState("");
-  const [showNotification, setShowNotification ] = useState(false);
-
+  const [errorMessage, setErrorMessage] = useState('');
   const { push} = useRouter();
-  
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   const [credentials, setCredentials] = useState({
@@ -36,20 +33,28 @@ export default function Home() {
 
   const loginUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    const intentos = 0; 
     try {
       await signInWithEmailAndPassword(
         auth,
         credentials.email,
         credentials.password);
-
         setLoginSuccess(true);
         push("/home");
         
     } catch (error) {
+      console.log("El error es: "+error);
 
-        if (error) {
+        if ( error == "FirebaseError: Firebase: Error (auth/invalid-credential)." ) {
+          setErrorMessage("Contraseña incorrecta")
+        }
+
+        if  (error == "FirebaseError: Firebase: Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later. (auth/too-many-requests)." ) {
+          setErrorMessage("Has ingresado demasiados intentos. El acceso a tu cuenta ha sido temporalmente deshablitado. Por favor ponte en contacto con el administrador para recuperarlo.  ")
+        }
+
+        else {
           console.log(error);
-          
         }
     }
   }
@@ -59,6 +64,7 @@ export default function Home() {
   const handleTermsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTermsAccepted(e.target.checked);
   };
+
 
   return (
     
@@ -110,6 +116,13 @@ export default function Home() {
                   
                 />
               </div>
+
+              {errorMessage && (
+              <div className="text-red-500 ml-2 mb-2 text-xs">{errorMessage}</div>
+            )}
+
+
+              
             </div>
 
             <div className="flex items-center justify-between mt-4">
@@ -138,6 +151,7 @@ export default function Home() {
             </div>
           </form>
           <div className="text-sm text-center text-blue-700  hover:text-blue-500 mt-4">
+            <Notification></Notification>
               <Link href="/signup">
                 ¿No tienes cuenta aún? ¡Regístrate!  
               </Link>
@@ -158,4 +172,4 @@ export default function Home() {
       
     </div>
   );
-}
+  }
