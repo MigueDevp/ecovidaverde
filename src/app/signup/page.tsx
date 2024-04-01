@@ -13,6 +13,7 @@ export default function SignUp() {
   });
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const changeUser = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCredentials({
@@ -20,6 +21,8 @@ export default function SignUp() {
       [e.target.name]: e.target.value,
     });
   };
+
+  
 
   const registerUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,6 +38,16 @@ export default function SignUp() {
       }, 2000);
     } catch (error) {
       console.log(error);
+
+      if (error == "FirebaseError: Firebase: Error (auth/email-already-in-use).") {
+        setErrorMessage("El correo que ingresaste ya se encuentra registrado.")
+        
+      }
+      if (error == "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password).") {
+        setErrorMessage("La contraseña debe contener por lo menos 6 carácteres")
+      }
+
+      
     }
   };
 
@@ -93,6 +106,10 @@ export default function SignUp() {
                     />
                   </div>
                 </div>
+
+                {errorMessage && (
+              <div className="text-red-500 ml-2 mb-2 text-xs">{errorMessage}</div>
+            )}
 
                 <div>
                   <button
