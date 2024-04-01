@@ -1,10 +1,9 @@
 "use client";
-import { Dialog } from '@headlessui/react'
-import { useState } from 'react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { routes } from '../controller/routes';
-import Image from 'next/image';
-import homepage from '@/app/images/hoja.png';
+import { Dialog } from "@headlessui/react";
+import { useState } from "react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import homepage from "@/app/images/hoja.png";
 
 interface NavigationItem {
   name: string;
@@ -16,26 +15,24 @@ interface NavbarProps {
 }
 
 export default function Navbar({ routes }: NavbarProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigation = [
-    { name: 'Inicio', href: routes.home },
-    { name: 'Mi jardín', href: routes.monitoreo },
-    { name: 'Acerca', href: routes.acerca },
+    { name: "Inicio", href: routes.home },
+    { name: "Mi jardín", href: routes.monitoreo },
+    { name: "Acerca", href: routes.acerca },
   ];
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1 items-center"> 
+      <nav
+        className="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div className="flex lg:flex-1 items-center">
           <a href="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">EcoVidaVerde</span>
-            <div className="h-8 w-8"> 
-              <Image
-                src={homepage}
-                alt="iconPage"
-                width={32} 
-                height={32} 
-              />
+            <div className="h-8 w-8">
+              <Image src={homepage} alt="iconPage" width={32} height={32} />
             </div>
           </a>
           <button
@@ -44,12 +41,15 @@ export default function Navbar({ routes }: NavbarProps) {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 mb-0">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600">
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600"
+            >
               {item.name}
             </a>
           ))}
@@ -60,7 +60,12 @@ export default function Navbar({ routes }: NavbarProps) {
           </a>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -107,5 +112,5 @@ export default function Navbar({ routes }: NavbarProps) {
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
+  );
 }

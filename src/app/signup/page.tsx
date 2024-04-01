@@ -1,19 +1,19 @@
 "use client";
-import { useState } from 'react';
-import Image from 'next/image';
-import homepage from '@/app/images/homepageimage.jpg';
-import Link from 'next/link';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/app/controller/firebase';
+import { useState } from "react";
+import Image from "next/image";
+import homepage from "@/app/images/homepageimage.jpg";
+import Link from "next/link";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/app/database/firebase";
 
 export default function SignUp() {
   const [credentials, setCredentials] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   });
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
-  const [error, setError] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const changeUser = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCredentials({
@@ -21,8 +21,6 @@ export default function SignUp() {
       [e.target.name]: e.target.value,
     });
   };
-
-  
 
   const registerUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,20 +32,24 @@ export default function SignUp() {
       );
       setRegistrationSuccess(true);
       setTimeout(() => {
-        window.location.href = '/'; 
+        window.location.href = "/";
       }, 2000);
     } catch (error) {
       console.log(error);
 
-      if (error == "FirebaseError: Firebase: Error (auth/email-already-in-use).") {
-        setErrorMessage("El correo que ingresaste ya se encuentra registrado.")
-        
+      if (
+        error == "FirebaseError: Firebase: Error (auth/email-already-in-use)."
+      ) {
+        setErrorMessage("El correo que ingresaste ya se encuentra registrado.");
       }
-      if (error == "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password).") {
-        setErrorMessage("La contraseña debe contener por lo menos 6 carácteres")
+      if (
+        error ==
+        "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password)."
+      ) {
+        setErrorMessage(
+          "La contraseña debe contener por lo menos 6 carácteres"
+        );
       }
-
-      
     }
   };
 
@@ -56,13 +58,20 @@ export default function SignUp() {
       <div className="w-full lg:w-1/2 flex justify-center items-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full">
           {error && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+            <div
+              className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+              role="alert"
+            >
               <strong>Error:</strong> {error}
             </div>
           )}
           {registrationSuccess && (
-            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-              <strong>Registro exitoso!</strong> Serás redirigido a la página de inicio de sesión en breve.
+            <div
+              className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+              role="alert"
+            >
+              <strong>Registro exitoso!</strong> Serás redirigido a la página de
+              inicio de sesión en breve.
             </div>
           )}
           {!registrationSuccess && (
@@ -70,12 +79,15 @@ export default function SignUp() {
               <h2 className="mt-6 mb-0 text-center text-3xl font-medium tracking-tight text-gray-900">
                 ¡Regístrate en EcoVidaVerde!
               </h2>
-              
+
               <form className="mt-8 space-y-6" onSubmit={registerUser}>
                 <div className="rounded-md shadow-sm space-y-4">
                   <div>
-                    <label htmlFor="email-address" className="block text-sm font-medium text-gray-400 mb-2 ml-2">
-                      Ingresa tu correo 
+                    <label
+                      htmlFor="email-address"
+                      className="block text-sm font-medium text-gray-400 mb-2 ml-2"
+                    >
+                      Ingresa tu correo
                     </label>
                     <input
                       id="email-address"
@@ -90,7 +102,10 @@ export default function SignUp() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="password" className="block text-sm font-medium text-gray-400 mb-2 ml-2">
+                    <label
+                      htmlFor="password"
+                      className="block text-sm font-medium text-gray-400 mb-2 ml-2"
+                    >
                       Ingresa tu contraseña
                     </label>
                     <input
@@ -102,15 +117,15 @@ export default function SignUp() {
                       value={credentials.password}
                       onChange={changeUser}
                       className="w-full px-3 py-2 mb-2 border border-gray-300 rounded-xl placeholder-gray-500 text-gray-900  focus:ring-green-900 focus:border-green-600 sm:text-sm"
-                      placeholder="Ingresa 8 carácteres como mínimo"
+                      placeholder="Ingresa 6 carácteres como mínimo"
                     />
                   </div>
                 </div>
-
                 {errorMessage && (
-              <div className="text-red-500 ml-2 mb-2 text-xs">{errorMessage}</div>
-            )}
-
+                  <div className="text-red-500 ml-2 mb-2 text-xs">
+                    {errorMessage}
+                  </div>
+                )}
                 <div>
                   <button
                     type="submit"
@@ -121,7 +136,10 @@ export default function SignUp() {
                 </div>
               </form>
               <div className="text-sm text-center mt-4">
-                <Link href="/" className="font-medium text-blue-700 hover:text-blue-500">
+                <Link
+                  href="/"
+                  className="font-medium text-blue-700 hover:text-blue-500"
+                >
                   ¿Ya tienes una cuenta? Inicia sesión
                 </Link>
               </div>

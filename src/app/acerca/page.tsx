@@ -1,22 +1,23 @@
 import Navbar from "../components/navbar";
 import { routes } from "../controller/routes";
 import Footer from "../components/footer";
+import Wallpaper from "../components/wallpaper";
+import DownWallpaper from "../components/downwallpaper";
 
 
-const navigation = [
-    { name: 'Inicio', href: '/home' },
-    { name: 'Monitoreo', href: '#' },
-    { name: 'Vida Verde', href: '#' },
-    { name: 'Acerca', href: '#' },
-  ]
-
-export default function Acerca() {
+export default function AcercaPage() {
     return(
-        <div className="bg-white">
+        <div>
+            <div className="h-screen w-screen flex justify-center items-center">
             <Navbar routes={routes} />
+            <Wallpaper></Wallpaper>
 
 
-            <Footer></Footer>
+            <DownWallpaper></DownWallpaper>
+
+        </div>
+        <Footer></Footer>
+
         </div>
     );
 }
