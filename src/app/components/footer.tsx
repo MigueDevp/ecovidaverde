@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="text-center">
           <div>
             <h5 className="text-lg font-bold mb-3">
-              Universidad Tecnológica de San Juan del Río
+              EcoVidaVerde
             </h5>
             <p>Av. La Palma No. 125, Col. Vista Hermosa</p>
             <p>San Juan del Río, Qro. | C.P. 76800</p>

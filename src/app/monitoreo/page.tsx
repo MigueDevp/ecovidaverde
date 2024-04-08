@@ -12,20 +12,18 @@ export default function Monitoreo() {
 
         <Wallpaper></Wallpaper>
 
-        <div className="mt-0 p-4 text-center shadow-md">
-          <div className="text-lg text-gray-800 mb-4">
-            Introduce tu número de celular para recibir notificaciones acerca de
-            tus plantas y estar siempre al tanto de su cuidado.
+        <div className="justify-items-center ml-32 mr-32">
+          <div className="text-center mt-8">
+            <h1 className="text-6xl font-bold tracking-tight">
+              Monitoreo en Tiempo Real
+            </h1>
+            <p className="mt-2 text-lg text-gray-600">
+              Monitorea tu jardín y asegura el bienestar de tus plantas
+            </p>
           </div>
-          <div className="flex justify-center items-center">
-            <input
-              type="text"
-              placeholder="Introduce tu número de celular"
-              className="px-4 py-2 mr-6 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-            />
-            <button className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
-              Conectar con WhatsApp
-            </button>
+          <div className="text-center">
+            <p>Monitorea en tiempo real el estado de tus plantas de una manera nunca antes vista.</p> 
+            <p>Puedes incluso</p>
           </div>
         </div>
 
