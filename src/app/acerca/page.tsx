@@ -25,7 +25,7 @@ export default function AcercaPage() {
             </p>
           </div>
 
-          <div className="bg-green-200 p-10 rounded-t-xl hover:scale-105 transition-transform duration-300 hover:">
+          <div className="bg-green-200 p-10 rounded-t-xl hover:scale-105 transition-transform duration-300">
             <h2 className="text-3xl font-bold mb-4">
               <strong>Misión</strong>
             </h2>
