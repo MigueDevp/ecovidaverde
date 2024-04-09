@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-16 px-8 bg-gray-100">
+      <div className="py-16 px-8 bg-gradient-to-b from-transparent to-[#e9ede8]">
         <span id="Ecovida"></span>
         <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-0 rounded-xl">
           <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
