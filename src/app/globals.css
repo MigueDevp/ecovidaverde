@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 640px) {
+    .h-screen { height: auto; }
+    .w-screen { width: auto; }
+    .ml-32, .mr-32 { margin-left: 1rem; margin-right: 1rem; }
+    .mx-20 { margin-left: 1rem; margin-right: 1rem; }
+    .my-9 { margin-top: 1rem; margin-bottom: 1rem; }
+    .text-6xl { font-size: 2.25rem; /* 36px */ }
+    .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  }
+  

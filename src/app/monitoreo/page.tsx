@@ -31,9 +31,9 @@ export default function Monitoreo() {
               Datos en tiempo real acerca de tu jardin:
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 mx-20 my-9 mt-8">
+          <div className="grid grid-cols-2 gap-4 mx-20 my-9 mt-12">
         {plantas.map((planta, index) => (
-          <div key={index} className="shadow-lg rounded-xl p-6 border-green-500 hover:scale-110 transition-transform duration-300">
+          <div key={index} className="shadow-2xl rounded-xl p-6 border-green-500 hover:scale-110 transition-transform duration-300">
             <h2 className="text-xl font-semibold">{planta.nombre}</h2>
             <p>Humedad: {planta.humedad}</p>
             <p>Temperatura: {planta.temperatura}</p>
