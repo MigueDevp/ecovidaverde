@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hidden sm:mb-8 sm:flex sm:justify-center mt-0">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Descubre más acerca de EcoVidaVerde.{" "}
-            <a href="/acerca" className="font-semibold text-green-600">
+            <a href="/acerca#descubreMas" className="font-semibold text-green-600">
               <span className="absolute inset-0" aria-hidden="true" />
               Leer más <span aria-hidden="true">&rarr;</span>
             </a>
@@ -76,84 +76,87 @@ export default function Home() {
           </div>
         </FadeInSection>
         <FadeInSection>
-        <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-32 rounded-xl">
-          <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
-            Funcionalidad del jardin automatizado
-          </h2>
-          <p className="mt-6 text-lg text-gray-600">
-            Para la elaboracion de un sistema de riego automatizado utilizando
-            ioT (Internet de las cosas). Es necesario contar con las
-            herramientas adecuadas para poder realizar diversas funciones
-            relacionadas con:
-          </p>
-          <br />
-          <ul className="list-disc list-inside text-gray-600">
-            <li>Lectura de datos de humedad en la tierra</li>
-            <li>Lectura de datos de temperatura ambiental</li>
-            <li>Procesamiento de datos en CPU</li>
-            <li>Envío de datos en tiempo real</li>
-            <li>Sincronizacion de motores</li>
-            <li>Conexiones fisicas y electricidad</li>
-            <li>Proceso de riego automatizado</li>
-          </ul>
+          <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-32 rounded-xl">
+            <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
+              Funcionalidad del jardin automatizado
+            </h2>
+            <p className="mt-6 text-lg text-gray-600">
+              Para la elaboracion de un sistema de riego automatizado utilizando
+              ioT (Internet de las cosas). Es necesario contar con las
+              herramientas adecuadas para poder realizar diversas funciones
+              relacionadas con:
+            </p>
+            <br />
+            <ul className="list-disc list-inside text-gray-600">
+              <li>Lectura de datos de humedad en la tierra</li>
+              <li>Lectura de datos de temperatura ambiental</li>
+              <li>Procesamiento de datos en CPU</li>
+              <li>Envío de datos en tiempo real</li>
+              <li>Sincronizacion de motores</li>
+              <li>Conexiones fisicas y electricidad</li>
+              <li>Proceso de riego automatizado</li>
+            </ul>
 
-          <p className="mt-6 text-gray-600">Entre otros.</p>
-        </div>
+            <p className="mt-6 text-gray-600">Entre otros.</p>
+          </div>
         </FadeInSection>
-<FadeInSection>
-        <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-20 rounded-xl">
-          <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
-            Herramientas empleadas
-          </h2>
+        <FadeInSection>
+          <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-14 rounded-xl">
+            <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
+              Herramientas empleadas
+            </h2>
 
-          <p className="mt-6 text-lg text-gray-600 mb-10">
-            Las herramientas para poder llevar a cabo el proyecto{" "}
-            <strong>EcoVidaVerde</strong> son cruciales, ya que estas nos
-            permiten llevar a cabo los procedimientos correctamente. Llevando a
-            cabo una serie de pasos que constituyen el sistema de riego.
-          </p>
-          <p className="mt-6 text-lg text-gray-600 mb-10">
-            Las herramientas utilizadas constan de 2 partes escenciales en el
-            desarrollo del proyecto, estas son tanto de Software y de Hardware.
-          </p>
+            <p className="mt-6 text-lg text-gray-600 mb-10">
+              Las herramientas para poder llevar a cabo el proyecto{" "}
+              <strong>EcoVidaVerde</strong> son cruciales, ya que estas nos
+              permiten llevar a cabo los procedimientos correctamente. Llevando
+              a cabo una serie de pasos que constituyen el sistema de riego.
+            </p>
+            <p className="mt-6 text-lg text-gray-600 mb-10">
+              Las herramientas utilizadas constan de 2 partes escenciales en el
+              desarrollo del proyecto, estas son tanto de Software y de
+              Hardware.
+            </p>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 ">SOFTWARE</h2>
-          <ul className="list-disc list-inside text-gray-600 mb-6">
-            <li>Broker MQTT</li>
-            <li>Servidor</li>
-            <li>Editor de codigo</li>
-            <li>
-              Lenguajes de programacion: Python, HTML, Javascript, TypeScript,
-              TailwindCSS
-            </li>
-          </ul>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 ">SOFTWARE</h2>
+            <ul className="list-disc list-inside text-gray-600 mb-6">
+              <li>Broker MQTT</li>
+              <li>Servidor</li>
+              <li>Editor de codigo</li>
+              <li>
+                Lenguajes de programacion: Python, HTML, Javascript, TypeScript,
+                TailwindCSS
+              </li>
+            </ul>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 ">HARDWARE</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 ">HARDWARE</h2>
 
-          <ul className="list-disc list-inside text-gray-600">
-            <li>Base de aluminio para las plantas 100x60 cm aproximádamente</li>
-            <li>Cables hembra-macho</li>
-            <li>Cables macho-macho</li>
-            <li>Pintura en aerosol</li>
-            <li>Tubos de metal para movimiento</li>
-            <li>Bandas de movimiento</li>
-            <li>Poleas</li>
-            <li>2 Servomotores</li>
-            <li>Arduino uno</li>
-            <li>Raspberry Pi</li>
-            <li>3 placas protoboard</li>
-            <li>6 sensores de húmedad</li>
-            <li>Sensor de temperatura</li>
-            <li>Módulo ESP32</li>
-            <li>6 macetas</li>
-            <li>Taladro</li>
-            <li>Sierra para cortar</li>
-            <li>Placas de madera de 10x10 cm aproximádamente</li>
-            <li>2 bombas de agua</li>
-            <li>Mangueras</li>
-            <li>Base de metal parte de arriba 100x60 cm aproximadamente</li>
-          </ul>
-        </div>
+            <ul className="list-disc list-inside text-gray-600">
+              <li>
+                Base de aluminio para las plantas 70x50 cm aproximádamente
+              </li>
+              <li>Cables hembra-macho</li>
+              <li>Cables macho-macho</li>
+              <li>Pintura en aerosol</li>
+              <li>Tubos de metal para movimiento</li>
+              <li>Bandas de movimiento</li>
+              <li>Poleas</li>
+              <li>2 Servomotores</li>
+              <li>Arduino uno</li>
+              <li>Raspberry Pi</li>
+              <li>3 placas protoboard</li>
+              <li>6 sensores de húmedad</li>
+              <li>Sensor de temperatura</li>
+              <li>Módulo ESP32</li>
+              <li>6 macetas</li>
+              <li>Taladro</li>
+              <li>Sierra para cortar</li>
+              <li>Placas de madera de 10x10 cm aproximádamente</li>
+              <li>2 bombas de agua</li>
+              <li>Mangueras</li>
+              <li>Base de metal parte de arriba 70x50 cm aproximadamente</li>
+            </ul>
+          </div>
         </FadeInSection>
       </div>
 
