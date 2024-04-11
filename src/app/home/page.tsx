@@ -12,8 +12,8 @@ export default function Home() {
       <Wallpaper></Wallpaper>
 
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center mt-0">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+        <div className="hidden sm:mb-8 sm:flex sm:justify-center mt-0 ">
+          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 hover:scale-110 transition-transform duration-300">
             Descubre más acerca de EcoVidaVerde.{" "}
             <a
               href="/acerca#descubreMas"

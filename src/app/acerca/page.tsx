@@ -226,7 +226,7 @@ export default function AcercaPage() {
                 </p>
               </div>
             </FadeInSection>
-            <span id="descubreMas"></span>
+
             <FadeInSection>
               <div className="mb-52">
                 <h1 className="text-6xl text-center font-bold tracking-tight text-gray-900 mb-12 mt-20">
@@ -242,7 +242,7 @@ export default function AcercaPage() {
                   proyecto son múltiples y variados, destacando los siguientes
                   aspectos:
                 </p>
-
+                <span id="descubreMas"></span>
                 <div className="mt-12">
                   <ul className="list-decimal ml-7 mt-6">
                     <li className="mb-4">
