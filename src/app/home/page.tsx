@@ -3,6 +3,7 @@ import { routes } from "../controller/routes";
 import Footer from "../components/footer";
 import Wallpaper from "../components/wallpaper";
 import DownWallpaper from "../components/downwallpaper";
+import FadeInSection from "../components/scrolldown";
 
 export default function Home() {
   return (
@@ -44,35 +45,37 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="py-16 px-8 bg-gradient-to-b from-transparent to-[#cfd7cf]">
         <span id="Ecovida"></span>
-        <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-0 rounded-xl">
-          <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
-            ¿Cómo funciona EcoVidaVerde?
-          </h2>
-          <p className="mt-6 text-lg text-gray-600">
-            EcoVidaVerde es una solución de jardinería inteligente que utiliza
-            la tecnología IoT para automatizar el riego de tus plantas. Mediante
-            sensores de humedad estratégicamente colocados en la base del
-            jardín, nuestro sistema monitorea constantemente las necesidades
-            hídricas de cada planta.
-          </p>
-          <p className="mt-4 text-lg text-gray-600">
-            La información recogida por los sensores es procesada por una
-            Raspberry Pi, que activa el sistema de riego cuando es necesario,
-            asegurando que cada planta reciba la cantidad exacta de agua que
-            necesita. Además de la humedad, EcoVidaVerde también te permite
-            visualizar datos en tiempo real sobre la temperatura ambiental y
-            otros parámetros importantes para el cuidado de tus plantas.
-          </p>
-          <p className="mt-4 text-lg text-gray-600">
-            Con EcoVidaVerde, puedes estar tranquilo sabiendo que tu jardín está
-            siendo cuidado de manera eficiente y sostenible, permitiéndote
-            disfrutar de un entorno verde y saludable sin preocupaciones.
-          </p>
-        </div>
-
+        <FadeInSection>
+          <div className="mx-auto max-w-4xl shadow-lg pb-20 px-20 mt-0 rounded-xl">
+            <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
+              ¿Cómo funciona EcoVidaVerde?
+            </h2>
+            <p className="mt-6 text-lg text-gray-600">
+              EcoVidaVerde es una solución de jardinería inteligente que utiliza
+              la tecnología IoT para automatizar el riego de tus plantas.
+              Mediante sensores de humedad estratégicamente colocados en la base
+              del jardín, nuestro sistema monitorea constantemente las
+              necesidades hídricas de cada planta.
+            </p>
+            <p className="mt-4 text-lg text-gray-600">
+              La información recogida por los sensores es procesada por una
+              Raspberry Pi, que activa el sistema de riego cuando es necesario,
+              asegurando que cada planta reciba la cantidad exacta de agua que
+              necesita. Además de la humedad, EcoVidaVerde también te permite
+              visualizar datos en tiempo real sobre la temperatura ambiental y
+              otros parámetros importantes para el cuidado de tus plantas.
+            </p>
+            <p className="mt-4 text-lg text-gray-600">
+              Con EcoVidaVerde, puedes estar tranquilo sabiendo que tu jardín
+              está siendo cuidado de manera eficiente y sostenible,
+              permitiéndote disfrutar de un entorno verde y saludable sin
+              preocupaciones.
+            </p>
+          </div>
+        </FadeInSection>
+        <FadeInSection>
         <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-32 rounded-xl">
           <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
             Funcionalidad del jardin automatizado
@@ -96,7 +99,8 @@ export default function Home() {
 
           <p className="mt-6 text-gray-600">Entre otros.</p>
         </div>
-
+        </FadeInSection>
+<FadeInSection>
         <div className="mx-auto max-w-4xl shadow-lg py-20 px-20 mt-20 rounded-xl">
           <h2 className="text-center text-6xl font-bold text-gray-900 mb-14 ">
             Herramientas empleadas
@@ -150,6 +154,7 @@ export default function Home() {
             <li>Base de metal parte de arriba 100x60 cm aproximadamente</li>
           </ul>
         </div>
+        </FadeInSection>
       </div>
 
       <DownWallpaper></DownWallpaper>

@@ -12,7 +12,6 @@ export default function Monitoreo() {
     { nombre: "Planta 4", humedad: "32%", temperatura: "12°C" },
     { nombre: "Planta 5", humedad: "76%", temperatura: "26°C" },
     { nombre: "Planta 6", humedad: "11%", temperatura: "32°C" },
-    
   ];
 
   return (

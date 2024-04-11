@@ -17,5 +17,12 @@ const config: Config = {
     },
   },
   plugins: [],
+  purge: {
+    options: {
+      safelist: ['fade-in'],
+    },
+  },
 };
+
+
 export default config;

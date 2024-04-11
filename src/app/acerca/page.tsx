@@ -3,6 +3,8 @@ import { routes } from "../controller/routes";
 import Footer from "../components/footer";
 import Wallpaper from "../components/wallpaper";
 import DownWallpaper from "../components/downwallpaper";
+import FadeInSection from "../components/scrolldown";
+
 
 export default function AcercaPage() {
   return (
@@ -114,7 +116,10 @@ export default function AcercaPage() {
       </div>
 
       <div className="justify-items-center mx-32 mb-96 pb-72 px-12 ">
+      
         <div className="text-pretty items-center">
+          <FadeInSection>
+          <div>
           <h1 className="text-6xl text-center font-bold tracking-tight text-gray-900 mb-12">
             Problemática
           </h1>
@@ -157,8 +162,14 @@ export default function AcercaPage() {
             del jardín por igual para que se conviertan en guardianes de nuestro
             precioso planeta.
           </p>
+          </div>
+          </FadeInSection>
+          
+          
 
           <div className="mt-32">
+            <FadeInSection>
+            <div>
             <h1 className="text-6xl text-center font-bold tracking-tight text-gray-900 mb-12">
               Alcance
             </h1>
@@ -180,9 +191,15 @@ export default function AcercaPage() {
               explotaciones agrícolas, EcoVidaVerde tiene la capacidad de
               escalar y adaptarse a cualquier tamaño o tipo de proyecto.
             </p>
+
+            </div>
+            </FadeInSection>
+            
           </div>
 
           <div className="mt-32">
+            <FadeInSection>
+            <div>
             <h1 className="text-6xl text-center font-bold tracking-tight text-gray-900 mb-12">
               Metodología
             </h1>
@@ -202,8 +219,11 @@ export default function AcercaPage() {
               la entrega de soluciones efectivas y de alta calidad para la
               agricultura sostenible y el cuidado de las plantas.
             </p>
+            </div>
+            </FadeInSection>
           </div>
         </div>
+       
       </div>
 
       <div className="mt-60">
