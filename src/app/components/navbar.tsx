@@ -13,7 +13,7 @@ interface NavbarProps {
 export default function Navbar({ routes }: NavbarProps) {
   const navigation = [
     { name: "Inicio", href: routes.home },
-    { name: "Mi jardín", href: routes.monitoreo },
+    { name: "Monitoreo", href: routes.monitoreo },
     { name: "Acerca", href: routes.acerca },
   ];
 

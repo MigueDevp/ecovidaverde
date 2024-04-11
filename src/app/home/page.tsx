@@ -15,7 +15,10 @@ export default function Home() {
         <div className="hidden sm:mb-8 sm:flex sm:justify-center mt-0">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Descubre más acerca de EcoVidaVerde.{" "}
-            <a href="/acerca#descubreMas" className="font-semibold text-green-600">
+            <a
+              href="/acerca#descubreMas"
+              className="font-semibold text-green-600"
+            >
               <span className="absolute inset-0" aria-hidden="true" />
               Leer más <span aria-hidden="true">&rarr;</span>
             </a>
@@ -34,7 +37,7 @@ export default function Home() {
               href="/monitoreo"
               className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-gray-100 shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
-              Monitoreo
+              Ver plantas
             </a>
             <a
               href="#Ecovida"
