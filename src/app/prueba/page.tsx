@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "@/app/database/firestore";
@@ -36,3 +36,4 @@ export default function Prueba() {
     </div>
   );
 }
+*/
