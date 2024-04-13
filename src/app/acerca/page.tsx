@@ -8,8 +8,12 @@ import cuidadoAguaImage from "@/app/images/wateer.png";
 import monitoreoImage from "@/app/images/monitorear.jpg";
 import uiReferenceImage from "@/app/images/ui.png";
 import proyectov1 from "@/app/images/jardinv1.jpg";
-import proyectov2 from "@/app/images/jardinv2.jpg";
+import proyectov2 from "@/app/images/jardinv4.png";
 import proyectov3 from "@/app/images/jardinv3.jpg";
+import proyectov4 from "@/app/images/jardinv5.png";
+import proyectov5 from "@/app/images/proyectov5.1.png";
+import proyectogg from "@/app/images/projectvv.png";
+
 import Image from "next/image";
 
 export default function AcercaPage() {
@@ -320,18 +324,20 @@ export default function AcercaPage() {
                     <div className="grid grid-cols-3 gap-4 mx-20 my-9 mt-12">
                       <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
                         <Image
-                          src={proyectov1}
+                          src={proyectov5}
                           alt="version1"
                           width={300}
                           height={300}
+                          className="image-wrapper"
                         ></Image>
                       </div>
                       <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
                         <Image
-                          src={proyectov2}
+                          src={proyectov4}
                           alt="version2"
                           width={300}
                           height={300}
+                          className="image-wrapper"
                         ></Image>
                       </div>
                       <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
@@ -340,6 +346,16 @@ export default function AcercaPage() {
                           alt="version1"
                           width={300}
                           height={300}
+                          className="image-wrapper"
+                        ></Image>
+                      </div>
+                      <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
+                        <Image
+                          src={proyectogg}
+                          alt="version1"
+                          width={300}
+                          height={300}
+                          className="image-wrapper"
                         ></Image>
                       </div>
                       <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
@@ -348,22 +364,16 @@ export default function AcercaPage() {
                           alt="version1"
                           width={300}
                           height={300}
+                          className="image-wrapper"
                         ></Image>
                       </div>
                       <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
                         <Image
-                          src={proyectov1}
+                          src={proyectov2}
                           alt="version1"
                           width={300}
                           height={300}
-                        ></Image>
-                      </div>
-                      <div className="hover:hover:scale-110 transition-transform duration-300 p-6">
-                        <Image
-                          src={proyectov1}
-                          alt="version1"
-                          width={300}
-                          height={300}
+                          className="image-wrapper"
                         ></Image>
                       </div>
                     </div>

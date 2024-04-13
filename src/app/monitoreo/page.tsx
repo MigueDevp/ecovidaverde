@@ -6,12 +6,12 @@ import DownWallpaper from "../components/downwallpaper";
 
 export default function Monitoreo() {
   const plantas = [
-    { nombre: "Planta 1", humedad: "45%", temperatura: "24°C" },
+    { nombre: "Planta 1", humedad: "12%", temperatura: "21°C" },
     { nombre: "Planta 2", humedad: "50%", temperatura: "22°C" },
-    { nombre: "Planta 3", humedad: "60%", temperatura: "45°C" },
-    { nombre: "Planta 4", humedad: "32%", temperatura: "12°C" },
-    { nombre: "Planta 5", humedad: "76%", temperatura: "26°C" },
-    { nombre: "Planta 6", humedad: "11%", temperatura: "32°C" },
+    { nombre: "Planta 3", humedad: "90%", temperatura: "20°C" },
+    { nombre: "Planta 4", humedad: "12%", temperatura: "20°C" },
+    { nombre: "Planta 5", humedad: "76%", temperatura: "21°C" },
+    { nombre: "Planta 6", humedad: "11%", temperatura: "19°C" },
   ];
 
   return (
@@ -31,14 +31,17 @@ export default function Monitoreo() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 mx-20 my-9 mt-12">
-        {plantas.map((planta, index) => (
-          <div key={index} className="shadow-2xl rounded-xl p-6 border-green-500 hover:scale-110 transition-transform duration-300">
-            <h2 className="text-xl font-semibold">{planta.nombre}</h2>
-            <p>Humedad: {planta.humedad}</p>
-            <p>Temperatura: {planta.temperatura}</p>
+            {plantas.map((planta, index) => (
+              <div
+                key={index}
+                className="shadow-2xl rounded-xl p-6 border-green-500 hover:scale-110 transition-transform duration-300"
+              >
+                <h2 className="text-xl font-semibold">{planta.nombre}</h2>
+                <p>Humedad: {planta.humedad}</p>
+                <p>Temperatura: {planta.temperatura}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
         </div>
         <DownWallpaper></DownWallpaper>
       </div>

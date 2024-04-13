@@ -11,7 +11,9 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
-    "firebase": "^10.9.0",
+    "@types/jsonwebtoken": "^9.0.6",
+    "firebase": "^10.7.2",
+    "firebase-admin": "^12.0.0",
     "framer-motion": "^11.0.25",
     "jsonschema": "^1.2.6",
     "mosca": "^2.8.3",
