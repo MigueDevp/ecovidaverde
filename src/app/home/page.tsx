@@ -1,5 +1,5 @@
-import Navbar from "../components/navbar";
 import { routes } from "../controller/routes";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Wallpaper from "../components/wallpaper";
 import DownWallpaper from "../components/downwallpaper";
@@ -23,6 +23,7 @@ export default function Home() {
               Leer más <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
+
         </div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

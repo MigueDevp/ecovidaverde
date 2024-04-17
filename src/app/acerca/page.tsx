@@ -13,6 +13,7 @@ import proyectov3 from "@/app/images/jardinv3.jpg";
 import proyectov4 from "@/app/images/jardinv5.png";
 import proyectov5 from "@/app/images/proyectov5.1.png";
 import proyectogg from "@/app/images/projectvv.png";
+import VideoPlayer from "../components/video";
 
 import Image from "next/image";
 
@@ -381,6 +382,17 @@ export default function AcercaPage() {
                 </div>
               </FadeInSection>
             </FadeInSection>
+
+            <div>
+              <div className="mx-72">
+                <h1 className="text-6xl text-center font-bold tracking-tight text-gray-900 mb-2 mt-22">
+                  Video de su funcionamiento
+                </h1>
+              </div>
+              <div className="mt-7 mb-16">
+                <VideoPlayer />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -8,10 +8,6 @@ import { auth } from "./database/firebase";
 import { useRouter } from "next/navigation";
 
 export default function LoginHome() {
-
-
-
-
   const [errorMessage, setErrorMessage] = useState("");
   const { push } = useRouter();
   const [termsAccepted, setTermsAccepted] = useState(false);

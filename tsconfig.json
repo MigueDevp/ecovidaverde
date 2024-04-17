@@ -35,7 +35,7 @@
     "src/app/database/credentials/firebaseconfig.js",
     "src/app/database/firebase.tsx",
     "src/app/database/credentials/firebaseconfig.js"
-, "src/app/controller/conectfirebase.js", "src/app/database/firestore.js"  ],
+, "src/app/controller/conectfirebase.js", "src/app/database/firestore.js", "src/app/components/modal.js"  ],
   "exclude": [
     "node_modules"
   ]
