@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+/*import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 
@@ -16,4 +16,4 @@ const appStore = initializeApp(firebaseCollection);
 const firestore = getFirestore(appStore);
 
 export { firestore };
-
+*/

@@ -4,30 +4,12 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Wallpaper from "../components/wallpaper";
 import DownWallpaper from "../components/downwallpaper";
-import { firestore } from "@/app/database/firestore";
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import ModalPlanta from "../components/modal";
 
 export default function Monitoreo() {
-  const [documents, setDocuments] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchDocuments = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(firestore, "lecturas"));
-        const documentsData = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setDocuments(documentsData);
-      } catch (error) {
-        console.error("Error: ", error);
-      }
-    };
-
-    fetchDocuments();
-  }, []);
+  
 
   const plantas = [
     { nombre: "Planta 1", humedad: "88%", temperatura: "21°C" },
