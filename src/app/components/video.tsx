@@ -2,19 +2,20 @@ import React from "react";
 
 const VideoPlayer = () => {
   return (
-    <div className="flex justify-center my-28">
-
-      <div className="aspect-w-8 aspect-h-9">
-        <iframe
-          className="w-auto h-auto"
-          src="FUNCIONAMIENTO.mp4"
+    <div className="my-12">
+      <div className="aspect-w-16 aspect-h-9">
+        <video
+          controls 
+          className="w-full h-full"
+          src="/FUNCIONAMIENTO.mp4"
           title="Video de Funcionamiento"
-          allowFullScreen
-        ></iframe>
+          width={640} 
+          height={360} 
+          autoPlay={false} 
+        ></video>
       </div>
     </div>
   );
 };
-
 
 export default VideoPlayer;
